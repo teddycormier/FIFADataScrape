@@ -11,9 +11,15 @@ import java.util.Scanner;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class FutWizScrape {
 
+    private static JTextField NameTextField;
+    private static JTextField RatingTextField;
+    private static JTextField TypeTextField;
+    private static JTextArea PlayerDetailsTextArea;
     private static final int THREAD_POOL_SIZE = 1;
     private static final int MAX_PAGES = 800;
     private static final AtomicInteger PRINTED_LINE_COUNTER = new AtomicInteger(0);
@@ -118,76 +124,46 @@ public class FutWizScrape {
                     }
 
                     switch (playerTypeInputTwo.toLowerCase()) {
-                        case "toty icon":
+                        case "toty icon" ->
                             playerTypeInputTwo = "totyicon";
-                            break;
-                        case "ucl live":
+                        case "ucl live" ->
                             playerTypeInputTwo = "ucllive";
-                            break;
-                        case "gold inform":
-                        case "inform gold":
+                        case "gold inform", "inform gold" ->
                             playerTypeInputTwo = "goldif";
-                            break;
-                        case "centurion":
+                        case "centurion" ->
                             playerTypeInputTwo = "cent";
-                            break;
-                        case "winter wildcard":
+                        case "winter wildcard" ->
                             playerTypeInputTwo = "wwreward";
-                            break;
-                        case "road to world cup":
-                        case "road to wc":
+                        case "road to world cup", "road to wc" ->
                             playerTypeInputTwo = "roadtowc";
-                            break;
-                        case "future stars":
-                        case "future star":
+                        case "future stars", "future star" ->
                             playerTypeInputTwo = "ffs";
-                            break;
-                        case "toty nominee":
+                        case "toty nominee" ->
                             playerTypeInputTwo = "totynominee";
-                            break;
-                        case "wc stories":
-                        case "world cup stories":
+                        case "wc stories", "world cup stories" ->
                             playerTypeInputTwo = "wcstories";
-                            break;
-                        case "wc icon":
-                        case "world cup icon":
+                        case "wc icon", "world cup icon" ->
                             playerTypeInputTwo = "wcicon";
-                            break;
-                        case "shape shifter":
+                        case "shape shifter" ->
                             playerTypeInputTwo = "shapeshifter";
-                            break;
-                        case "europa league rttf":
-                        case "europa league road to the final":
+                        case "europa league rttf", "europa league road to the final" ->
                             playerTypeInputTwo = "uelrttf";
-                            break;
-                        case "champions league rttf":
-                        case "champions league road to the final":
+                        case "champions league rttf", "champions league road to the final" ->
                             playerTypeInputTwo = "uclrttf";
-                            break;
-                        case "wc tott":
-                        case "world cup tott":
-                        case "world cup team of the tournament":
+                        case "wc tott", "world cup tott", "world cup team of the tournament" ->
                             playerTypeInputTwo = "wctott";
-                            break;
-                        case "wc phenoms":
-                        case "world cup phenoms":
+                        case "wc phenoms", "world cup phenoms" ->
                             playerTypeInputTwo = "wcphenoms";
-                            break;
-                        case "rule breaker":
-                        case "rulebreakers":
+                        case "rule breaker", "rulebreakers" ->
                             playerTypeInputTwo = "rulebreakers";
-                            break;
-                        case "world cup hero":
+                        case "world cup hero" ->
                             playerTypeInputTwo = "futherowc";
-                            break;
-                        case "fantasy team 1":
+                        case "fantasy team 1" ->
                             playerTypeInputTwo = "fantasy1";
-                            break;
-                        case "non rare gold":
+                        case "non rare gold" ->
                             playerTypeInputTwo = "gold-nr";
-                            break;
-                        default:
-                            break;
+                        default -> {
+                        }
                     }
 
                     String playerTypeInput = playerTypeInputOne + playerTypeInputTwo;
