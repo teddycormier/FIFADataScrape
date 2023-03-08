@@ -25,7 +25,7 @@ public class FutWizScrape {
     private static final AtomicInteger PRINTED_LINE_COUNTER = new AtomicInteger(0);
     private static final AtomicBoolean KEEP_SEARCHING = new AtomicBoolean(true);
 
-    private static class PlayerSearchTask implements Callable<Integer> {
+    protected static class PlayerSearchTask implements Callable<Integer> {
 
         private final String playerNameInput;
         private final String playerRatingInput;
