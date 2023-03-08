@@ -23,7 +23,7 @@ public class FutWizScrape {
     private static final int THREAD_POOL_SIZE = 1;
     private static final int MAX_PAGES = 800;
     private static final AtomicInteger PRINTED_LINE_COUNTER = new AtomicInteger(0);
-    private static final AtomicBoolean KEEP_SEARCHING = new AtomicBoolean(true);
+    protected static final AtomicBoolean KEEP_SEARCHING = new AtomicBoolean(true);
 
     protected static class PlayerSearchTask implements Callable<Integer> {
 
