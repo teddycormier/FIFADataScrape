@@ -130,7 +130,7 @@ public class FutWizScrape {
                             playerTypeInputTwo = "ucllive";
                         case "gold inform", "inform gold" ->
                             playerTypeInputTwo = "goldif";
-                        case "centurion" ->
+                        case "centurion", "centurions" ->
                             playerTypeInputTwo = "cent";
                         case "winter wildcard" ->
                             playerTypeInputTwo = "wwreward";
@@ -158,6 +158,8 @@ public class FutWizScrape {
                             playerTypeInputTwo = "rulebreakers";
                         case "world cup hero" ->
                             playerTypeInputTwo = "futherowc";
+                        case "fut hero", "hero" ->
+                            playerTypeInputTwo = "futhero";
                         case "fantasy team 1" ->
                             playerTypeInputTwo = "fantasy1";
                         case "non rare gold" ->
